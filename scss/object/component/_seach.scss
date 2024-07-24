@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-search {
+    width: 318px;
+    height: 46px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @include var.breakpoint(tablet) {
+        width: 546px;
+    }
+    @include var.breakpoint(pc) {
+        margin: 0;
+    }
+
+    &__box {
+        width: 68%;
+        margin-right: 14px;
+        background-color: #ffff;
+        border: solid 1px var.$gray;
+        border-radius: 10px;
+        background-image: url(../../../images/パス\ 270.svg);
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        background-position: 5px center;
+    }
+
+    &__btn {
+        width: auto;
+        flex-grow: 1;
+        background: linear-gradient(to right, #DED8D3, #F2EDE9);
+        border: solid 1px var.$gray;
+        border-radius: 10px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var.$gray;
+    }
+}

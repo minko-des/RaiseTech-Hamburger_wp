@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@use "../foundation/variables" as var;
+
+
+.l-main {
+    width: 100%;
+    height: auto;
+    background-color: var.$ivory;
+}

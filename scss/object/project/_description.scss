@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-description {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    margin-top: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+}

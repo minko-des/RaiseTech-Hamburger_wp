@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-sidebar {
+    width: 100%;
+    color: var.$gray;
+    padding-top: 90px;
+
+    .sidebar__title {
+        font-size: 3.4rem;
+        margin-left: 12.5%;
+    } 
+}

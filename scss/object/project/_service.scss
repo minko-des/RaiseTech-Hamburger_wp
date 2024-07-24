@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-service {
+    margin-top: 20px;
+    position: relative;
+
+    @include var.breakpoint(tablet) {
+        width: 48%;
+    }
+
+    .service__img {
+        width: 100%;
+    }    
+}

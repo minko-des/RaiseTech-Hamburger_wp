@@ -1,3 +1,40 @@
+@charset "UTF-8";
 
+
+//foundation
 @use "foundation/reset";
 @use "foundation/base";
+@use "foundation/variables";
+
+//layout
+@use "layout/wrapper";
+@use "layout/header";
+@use "layout/main";
+@use "layout/sidebar";
+@use "layout/footer";
+
+//object_component
+@use "object/component/description__list";
+@use "object/component/line";
+@use "object/component/heading";
+@use "object/component/menu-btn";
+@use "object/component/footer__list";
+@use "object/component/copyright";
+@use "object/component/seach";
+
+//object_project
+@use "object/project/content-wrap";
+@use "object/project/content";
+@use "object/project/description-wrap";
+@use "object/project/description";
+@use "object/project/p-header";
+@use "object/project/main-visual";
+@use "object/project/service";
+@use "object/project/service__title";
+@use "object/project/access";
+@use "object/project/access__text";
+@use "object/project/p-footer";
+@use "object/project/p-sidebar";
+@use "object/project/p-sidebar__nav";
+
+//object_utility

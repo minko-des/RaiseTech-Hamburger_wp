@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@use "../foundation/variables" as var;
+
+
+.l-wrapper {
+    width: 100%;
+    height: auto;
+
+    @include var.breakpoint(pc) {
+    display: flex;
+    flex-direction: row;
+    }
+
+    .l-main-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        @include var.breakpoint(pc) {
+            width: 80%;
+        }
+    }
+}

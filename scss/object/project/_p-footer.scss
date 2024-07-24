@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-footer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: #ffff;
+    
+    .c-footer__list {
+
+        @include var.breakpoint(tablet) {
+            padding-top: 30px;
+            font-size: 2.0rem;
+        }
+        @include var.breakpoint(pc) {
+            padding-top: 40px;
+        }
+    }
+
+    .c-copyright {
+        position: absolute;
+        bottom: 18px;
+        left: 50%;
+        transform: translate(-50%,0);
+
+        @include var.breakpoint(tablet) {
+            bottom: 26px;
+        }
+    }
+}

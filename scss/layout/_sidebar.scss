@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@use "../foundation/variables" as var;
+
+
+.l-sidebar {
+    display: none;
+    width: 20%;
+    height: auto;
+    background-color: var.$beige_sb;
+
+    @include var.breakpoint(pc) {
+        display: block;
+    }
+}

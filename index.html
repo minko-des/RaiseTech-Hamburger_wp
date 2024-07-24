@@ -7,122 +7,144 @@
     <meta name="description" content="ページの内容を表す文章を書く、検索結果のタイトル下に表示される">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="#" sizes="16x16" type="image/png">  <!-- ファビコン読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jqueryのライブラリ読み込み -->
     <script defer src="./js/main.js"></script>  <!-- javaScriptファイル読み込み -->
 </head>
 <body>
     <div class="l-wrapper">
-        
-        <header class="l-header">
-            <h1 class="c-heading">Hamburger</h1>
-            <form class="p-header__search" method="get" action="#">
-            <input name="s" type="text" placeholder="キーワードを入力">
-            <input type="submit" value="検索">
-            </form>
-        </header>
+        <div class="l-main-wrapper">
 
-        <main class="l-main">
-            <article class="p-main-visual">
-                <img class="p-main-visual__img" src="./images/mainvisual-pc.jpg" alt="メインビジュアル">
-                <h2 class="p-main-visual__title">ダミーサイト</h2>
-            </article>
-            <div class="p-main-content">
-                <ul class="p-content-wrap">
-                    <li class="p-service-content">
-                        <img class="p-service-content__img" src="" alt="">
-                        <h2 class="p-service-content__title">Take Out</h2>
-                        <ul class="p-description-wrap">
-                            <li class="c-description">
-                                <dl>
-                                    <dt>Take OUT</dt>
-                                    <dd>当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利</dd>
-                                </dl>
-                            </li>
-                            <li class="c-description">
-                                <dl>
-                                    <dt>Take OUT</dt>
-                                    <dd>当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利</dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="p-service-content">
-                        <img class="p-service-content__img" src="" alt="">
-                        <h2 class="p-service-content__title">Eat In</h2>
-                        <ul class="description-wrap">
-                            <li class="c-description">
-                                <dl>
-                                    <dt>Eat In</dt>
-                                    <dd>店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけ</dd>
-                                </dl>
-                            </li>
-                            <li class="c-description">
-                                <dl>
-                                    <dt>Eat In</dt>
-                                    <dd>店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけ</dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+            <header class="l-header">
+                <div class="p-header">
+                    <h1 class="p-header__heading c-heading--roboto">Hamburger</h1>
+                    <button class="c-menu-btn"><span>Menu</span></button>
+                    <form class="c-search" method="get" action="#">
+                        <input class="c-search__box" name="s" type="text" placeholder="">
+                        <input class="c-search__btn" type="submit" value="検索">
+                    </form>
+                </div>
+            </header>
+
+            <main class="l-main">
+                <article class="p-main-visual">
+                    <img class="main-visual__img" src="./images/mainvisual-sp@2x.jpg" alt="メインビジュアル">
+                    <h2 class="main-visual__heading c-title">ダミーサイト</h2>
+                </article>
+                <div class="p-content-wrap">
+                    <ul class="p-content">
+                        <li class="p-service">
+                            <img class="service__img" src="./images/service-content-takeout.jpg" alt="Take Outイメージ">
+                            <div class="p-service__title">
+                                <h2 class="service__title__label c-heading--roboto">Take Out</h2>
+                                <div class="c-line"></div>
+                            </div>
+                            <ul class="p-description-wrap">
+                                <li class="p-description">
+                                    <dl class="c-description__list">
+                                        <dt>Take OUT</dt>
+                                        <dd>当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</dd>
+                                    </dl>
+                                </li>
+                                <li class="p-description">
+                                    <dl class="c-description__list">
+                                        <dt>Take OUT</dt>
+                                        <dd>当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="p-service">
+                            <img class="service__img" src="./images/service-content-eatin.jpg" alt="Eat Inイメージ">
+                            <div class="p-service__title">
+                                <h2 class="service__title__label c-heading--roboto">Eat In</h2>
+                                <div class="c-line"></div>
+                            </div>
+                            <ul class="p-description-wrap">
+                                <li class="p-description">
+                                    <dl class="c-description__list">
+                                        <dt>Eat In</dt>
+                                        <dd>店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</dd>
+                                    </dl>
+                                </li>
+                                <li class="p-description">
+                                    <dl class="c-description__list">
+                                        <dt>Eat In</dt>
+                                        <dd>店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <article class="p-access">
+                    <img class="access__img" src="./images/map.jpg" alt="地図">
+                    <div class="overlay--all"></div>
+
+                    <div class="overlay--half">
+                        <div class="p-access__text">
+                            <h2 class="access__text__title c-heading--notosans">見出しが入ります</h2>
+                            <div class="c-line"></div>
+                            <p class="c-heading--notosans">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        </div>
+                    </div>
+
+                </article>
+            </main>
+
+        </div>
+
+        <aside class="l-sidebar">
+            <div class="p-sidebar">
+                <h2 class="sidebar__title c-heading--roboto">Menu</h2>
+                <nav class="p-sidebar__nav">
+                    <ul class="sidebar__nav__list">
+                        <li class="c-heading--notosans">バーガー
+                            <ul class="sidebar__nav__list__item">
+                                <li>ハンバーガー</li>
+                                <li>チーズバーガー</li>
+                                <li>テリヤキバーガー</li>
+                                <li>アボカドバーガー</li>
+                                <li>フィッシュバーガー</li>
+                                <li>ベーコンバーガー</li>
+                                <li>チキンバーガー</li>
+                            </ul>
+                        </li>
+                        <li class="c-heading--notosans">サイド
+                            <ul class="sidebar__nav__list__item">
+                                <li>ポテト</li>
+                                <li>サラダ</li>
+                                <li>ナゲット</li>
+                                <li>コーン</li>
+                            </ul>
+                        </li>
+                        <li class="c-heading--notosans">ドリンク
+                            <ul class="sidebar__nav__list__item">
+                                <li>コーラ</li>
+                                <li>ファンタ</li>
+                                <li>オレンジ</li>
+                                <li>アップル</li>
+                                <li>紅茶<span>(Ice/Hot)</span></li>
+                                <li>コーヒー<span>(Ice/Hot)</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <article class="p-access-content">
-                <img class="p-access-content__img" src="./images/" alt="地図">
-                <h2 class="p-access-content__title">見出しが入ります</h2>
-                <span>線</span>
-                <p></p>
-            </article>
-        </main>
-
-        <aside class="l-sidemenu">
-            <h2 class="l-sidemenu__title">Menu</h2>
-            <nav class="l-sidemenu__nav">
-                <ul class="l-sidemenu__nav__menu">
-                    <li>バーガー
-                        <ul class="l-sidemenu__nav__menu__item">
-                            <li>ハンバーガー</li>
-                            <li>チーズバーガー</li>
-                            <li>テリヤキバーガー</li>
-                            <li>アボカドバーガー</li>
-                            <li>フィッシュバーガー</li>
-                            <li>ベーコンバーガー</li>
-                            <li>チキンバーガー</li>
-                        </ul>
-                    </li>
-                    <li>サイド
-                        <ul class="l-sidemenu__nav__menu__item">
-                            <li>ポテト</li>
-                            <li>サラダ</li>
-                            <li>ナゲット</li>
-                            <li>コーン</li>
-                        </ul>
-                    </li>
-                    <li>ドリンク
-                        <ul class="l-sidemenu__nav__menu__item">
-                            <li>コーラ</li>
-                            <li>ファンタ</li>
-                            <li>オレンジ</li>
-                            <li>アップル</li>
-                            <li>紅茶<span>(Ice/Hot)</span></li>
-                            <li>コーヒー<span>(Ice/Hot)</span></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
         </aside>
 
-        <footer class="l-footer">
-            <ul class="l-footer__list">
-                <li>ショップ情報</li>
-                <li>ヒストリー</li>
-            </ul>
-            <p class="l-footer__copyright">Copyright:RaiseTech</p>
-        </footer>
-
     </div>
+
+    <footer class="l-footer">
+        <div class="p-footer">
+            <p class="c-footer__list"><a href="">ショップ情報</a><span class="c-footer__list__vertical-line"></span><a href="">ヒストリー</a></p>
+            <small class="c-copyright">Copyright: RaiseTech</small>
+        </div>
+    </footer>
+
 </body>
 </html>

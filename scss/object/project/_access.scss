@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-access {
+    width: 100%;
+    height: 690px;
+    margin-top: 49px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include var.breakpoint(tablet) {
+        height: 415px;
+    }
+    @include var.breakpoint(pc) {
+        height: 650px;
+    }
+
+    .access__img {
+        width: 100%;  //画面幅が画像幅以上になった場合に拡大
+        min-width: 1043px;  //幅1043px以下に縮小しないように（元の画像サイズを維持）
+        height: auto;
+        object-fit: cover;
+    }
+
+    .overlay--all {
+        width: 100%;
+        height: 100%;
+        background-color: rgba( var.$gray, 0.5);  //backgroundにだけ透過させる
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .overlay--half {
+        width: 100%;
+        height: 60%;
+        background-color: rgba( 0, 0, 0, 0.3);  //backgroundにだけ透過させる
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include var.breakpoint(tablet) {
+            height: 100%;
+        }
+        @include var.breakpoint(pc) {
+            width: 60%;
+        }       
+    }
+}
