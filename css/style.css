@@ -471,9 +471,10 @@ ul, ol {
   color: #707070;
 }
 
-.content-wrap {
+.p-content-wrap {
   width: 90%;
   height: auto;
+  margin: 0 auto;
 }
 
 .p-content {
