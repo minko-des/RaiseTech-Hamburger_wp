@@ -16,8 +16,8 @@
     <script defer src="./js/main.js"></script>  <!-- javaScriptファイル読み込み -->
 </head>
 <body>
-    <div class="l-wrapper">
-        <div class="l-main-wrapper">
+    <div class="p-wrapper">
+        <div class="wrapper__main">
 
             <header class="l-header">
                 <div class="p-header">
@@ -32,13 +32,13 @@
 
             <main class="l-main">
                 <article class="p-main-visual">
-                    <img class="main-visual__img" src="./images/mainvisual-sp@2x.jpg" alt="メインビジュアル">
+                    <img class="main-visual__sp c-main-img" src="./images/mainvisual-sp.jpg" alt="メインビジュアル スマホ">
+                    <img class="main-visual__pc c-main-img" src="./images/mainvisual-pc@2x.jpg" alt="メインビジュアル パソコン">
                     <h2 class="main-visual__heading c-title">ダミーサイト</h2>
                 </article>
                 <div class="p-content-wrap">
                     <ul class="p-content">
-                        <li class="p-service">
-                            <img class="service__img" src="./images/service-content-takeout.jpg" alt="Take Outイメージ">
+                        <li class="p-service--takeout">
                             <div class="p-service__title">
                                 <h2 class="service__title__label c-heading--roboto">Take Out</h2>
                                 <div class="c-line"></div>
@@ -58,8 +58,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="p-service">
-                            <img class="service__img" src="./images/service-content-eatin.jpg" alt="Eat Inイメージ">
+                        <li class="p-service--eatin">
                             <div class="p-service__title">
                                 <h2 class="service__title__label c-heading--roboto">Eat In</h2>
                                 <div class="c-line"></div>
@@ -82,66 +81,66 @@
                     </ul>
                 </div>
                 <article class="p-access">
-                    <img class="access__img" src="./images/map.jpg" alt="地図">
                     <div class="overlay--all"></div>
-
-                    <div class="overlay--half">
-                        <div class="p-access__text">
-                            <h2 class="access__text__title c-heading--notosans">見出しが入ります</h2>
-                            <div class="c-line"></div>
-                            <p class="c-heading--notosans">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                        </div>
+                    <div class="overlay--half"></div>
+                    <div class="p-access__text">
+                        <h2 class="access__text__title c-heading--notosans">見出しが入ります</h2>
+                        <div class="c-line"></div>
+                        <p class="c-heading--notosans">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                     </div>
+                    
 
                 </article>
             </main>
-
         </div>
 
         <aside class="l-sidebar">
             <div class="p-sidebar">
+                <button class="c-close-btn"><span>クローズボタン</span></button>
                 <h2 class="sidebar__title c-heading--roboto">Menu</h2>
                 <nav class="p-sidebar__nav">
                     <ul class="sidebar__nav__list">
-                        <li class="c-heading--notosans">バーガー
+                        <li class="c-heading--notosans"><a href="#">バーガー</a>
                             <ul class="sidebar__nav__list__item">
-                                <li>ハンバーガー</li>
-                                <li>チーズバーガー</li>
-                                <li>テリヤキバーガー</li>
-                                <li>アボカドバーガー</li>
-                                <li>フィッシュバーガー</li>
-                                <li>ベーコンバーガー</li>
-                                <li>チキンバーガー</li>
+                                <li><a href="#">ハンバーガー</a></li>
+                                <li><a href="#">チーズバーガー</a></li>
+                                <li><a href="#">テリヤキバーガー</a></li>
+                                <li><a href="#">アボカドバーガー</a></li>
+                                <li><a href="#">フィッシュバーガー</a></li>
+                                <li><a href="#">ベーコンバーガー</a></li>
+                                <li><a href="#">チキンバーガー</a></li>
                             </ul>
                         </li>
-                        <li class="c-heading--notosans">サイド
+                        <li class="c-heading--notosans"><a href="#">サイド</a>
                             <ul class="sidebar__nav__list__item">
-                                <li>ポテト</li>
-                                <li>サラダ</li>
-                                <li>ナゲット</li>
-                                <li>コーン</li>
+                                <li><a href="#">ポテト</a></li>
+                                <li><a href="#">サラダ</a></li>
+                                <li><a href="#">ナゲット</a></li>
+                                <li><a href="#">コーン</a></li>
                             </ul>
                         </li>
-                        <li class="c-heading--notosans">ドリンク
+                        <li class="c-heading--notosans"><a href="#">ドリンク</a>
                             <ul class="sidebar__nav__list__item">
-                                <li>コーラ</li>
-                                <li>ファンタ</li>
-                                <li>オレンジ</li>
-                                <li>アップル</li>
-                                <li>紅茶<span>(Ice/Hot)</span></li>
-                                <li>コーヒー<span>(Ice/Hot)</span></li>
+                                <li><a href="#">コーラ</a></li>
+                                <li><a href="#">ファンタ</a></li>
+                                <li><a href="#">オレンジ</a></li>
+                                <li><a href="#">アップル</a></li>
+                                <li><a href="#">紅茶<span>(Ice/Hot)</span></a></li>
+                                <li><a href="#">コーヒー<span>(Ice/Hot)</span></a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </div>
         </aside>
-
+        <div class="p-sidebar__bg"></div>
     </div>
 
     <footer class="l-footer">
         <div class="p-footer">
-            <p class="c-footer__list"><a href="">ショップ情報</a><span class="c-footer__list__vertical-line"></span><a href="">ヒストリー</a></p>
+            <p class="c-footer__list">
+                <a href="#">ショップ情報</a><span class="c-footer__list__vertical-line"></span><a href="#">ヒストリー</a>
+            </p>
             <small class="c-copyright">Copyright: RaiseTech</small>
         </div>
     </footer>

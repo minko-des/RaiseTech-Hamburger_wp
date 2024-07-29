@@ -2,15 +2,28 @@
 @use "../../foundation/variables" as var;
 
 
-.p-service {
+.p-service--takeout,.p-service--eatin {
+    width: 100%;
+    height: auto;
+    min-height: 642px;
     margin-top: 20px;
+    background-image: url(../../../images/service-content-takeout.jpg);
+    background-size: cover;
+    background-position: center;  //左右上下共に中央
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;  //子要素description-wrapを下端に配置
     position: relative;
 
     @include var.breakpoint(tablet) {
-        width: 48%;
+        width: 47%;
+        min-height: 680px;
     }
+    @include var.breakpoint(pc) {
+        min-height: 1000px;
+    }
+}
 
-    .service__img {
-        width: 100%;
-    }    
+.p-service--eatin {
+    background-image: url(../../../images/service-content-eatin.jpg);
 }

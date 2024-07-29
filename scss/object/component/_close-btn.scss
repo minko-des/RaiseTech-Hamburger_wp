@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-close-btn {
+    width: 40px;
+    height: 40px;
+
+    span {
+        font-size: 0;
+        display: block;
+        width: 45px;
+        height: 6px;
+        background-color: var.$gray;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(-45deg);
+
+        &::after {
+            content: "";
+            width: 45px;
+            height: 6px;
+            background-color: var.$gray;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(90deg);
+        }
+    }
+}

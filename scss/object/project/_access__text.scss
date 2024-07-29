@@ -4,14 +4,16 @@
 
 .p-access__text {
     width: 100%;
+    height: auto;
     padding: 40px 12%;
     color: #ffff;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,0);
     display: flex;
     flex-direction: column;
+    z-index: 3;
+
+    @include var.breakpoint(pc) {
+        width: 60%;
+    }
 
     .access__text__title {
         font-size: 3.0rem;

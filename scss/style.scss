@@ -7,7 +7,6 @@
 @use "foundation/variables";
 
 //layout
-@use "layout/wrapper";
 @use "layout/header";
 @use "layout/main";
 @use "layout/sidebar";
@@ -21,6 +20,8 @@
 @use "object/component/footer__list";
 @use "object/component/copyright";
 @use "object/component/seach";
+@use "object/component/main-img";
+@use "object/component/close-btn";
 
 //object_project
 @use "object/project/content-wrap";
@@ -36,5 +37,9 @@
 @use "object/project/p-footer";
 @use "object/project/p-sidebar";
 @use "object/project/p-sidebar__nav";
+@use "object/project/wrapper";
+@use "object/project/sidebar__bg";
 
 //object_utility
+@use "object/utility/open";
+@use "object/utility/overlay";

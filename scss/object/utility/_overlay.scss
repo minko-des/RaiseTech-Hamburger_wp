@@ -1,0 +1,7 @@
+//サイドバーの背景色
+
+.u-overlay {
+    visibility: visible;  //表示させる（display:none/blockではアニメーションができない）
+    opacity: 0.5;  //透過度
+    transition: opacity 0.5s;  //アニメーション
+}

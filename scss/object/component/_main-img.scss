@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-main-img {
+    width: 100%;
+    min-height: 285px;
+    min-width: 375px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

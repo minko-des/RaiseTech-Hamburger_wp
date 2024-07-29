@@ -3,9 +3,33 @@
 
 
 .p-sidebar {
-    width: 100%;
-    color: var.$gray;
+    width: 80%;
+    height: 100%;
     padding-top: 90px;
+    color: var.$gray;
+    background-color: var.$beige_sb;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+
+    @include var.breakpoint(tablet) {
+        width: 45%;
+    }
+    @include var.breakpoint(pc) {
+        width: 100%;
+        left: 0;
+    }
+
+    .c-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 5%;
+        
+        @include var.breakpoint(pc) {
+            display: none;
+        }
+    }
 
     .sidebar__title {
         font-size: 3.4rem;

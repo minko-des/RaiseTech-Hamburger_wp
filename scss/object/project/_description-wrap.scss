@@ -5,12 +5,8 @@
 .p-description-wrap {
     width: 100%;
     height: auto;
-    padding: 0 16px;
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
-    transform: translate(-50%,0);
+    padding: 16px;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }

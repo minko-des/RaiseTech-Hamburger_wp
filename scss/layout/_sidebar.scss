@@ -3,12 +3,10 @@
 
 
 .l-sidebar {
-    display: none;
-    width: 20%;
-    height: auto;
-    background-color: var.$beige_sb;
 
     @include var.breakpoint(pc) {
         display: block;
+        width: 20%;
+        position: relative;
     }
 }

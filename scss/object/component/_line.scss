@@ -1,5 +1,8 @@
 @charset "UTF-8";
+@use "../../foundation/variables" as var;
 
+
+//見出しのアンダーライン
 .c-line {
     background-color: #ffff;
     height: 4px;

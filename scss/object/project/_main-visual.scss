@@ -11,15 +11,23 @@
     @include var.breakpoint(pc) {
         height: 530px;
     }
+    
+    .main-visual__sp {
+        @include var.breakpoint(tablet) {
+            display: none;
+        }
+    }
 
-    .main-visual__img {
-        width: 100%;
-        min-height: 285px;
-        min-width: 375px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+    .main-visual__pc {
+        display: none;
+
+        @include var.breakpoint(tablet) {
+            display: block;
+        }
+        @include var.breakpoint(pc) {
+            object-fit: cover;
+            height: 100%;
+        }
     }
 
     .main-visual__heading {
