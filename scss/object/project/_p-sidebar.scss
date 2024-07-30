@@ -17,6 +17,7 @@
         width: 45%;
     }
     @include var.breakpoint(pc) {
+        position: static;
         width: 100%;
         left: 0;
     }

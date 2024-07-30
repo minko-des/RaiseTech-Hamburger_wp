@@ -1,5 +1,8 @@
-//サイドバースライドイン表示
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
 
+
+//サイドバー位置、スライド表示非表示
 .u-open {
     right: 0;  //position位置を-100%から0にすることでスライド表示
     transition: right 0.3s;  //アニメーション
