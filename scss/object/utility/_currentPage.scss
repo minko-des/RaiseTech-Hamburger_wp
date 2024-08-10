@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+//ページネーションのページナンバーボタンのカレント時のスタイル
+.u-currentPage {
+    background-color: var.$brown_bg;
+    color: #ffff;
+}

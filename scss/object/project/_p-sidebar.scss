@@ -8,6 +8,7 @@
     padding-top: 90px;
     color: var.$gray;
     background-color: var.$beige_sb;
+    overflow: auto;  //メニューだけスクロールできるように
     position: absolute;
     top: 0;
     right: -100%;

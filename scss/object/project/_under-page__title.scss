@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-under-page__title {
+    width: 100%;
+    color: var.$brown_txt;
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    padding: 0 5%;
+
+    @include var.breakpoint(tablet) {
+        margin-top: 39px;
+    }
+    @include var.breakpoint(pc) {
+        margin-top: 63px;
+    }
+
+    h2 {      
+        @include var.breakpoint(tablet) {
+            font-size: 3.6rem;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        margin-top: 29px;
+
+        @include var.breakpoint(tablet) {
+            margin-top: 60px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-single__product {
+    width: 100%;
+
+    .product__content {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+
+        @include var.breakpoint(tablet) {
+            margin-top: 60px;
+        }
+
+        &__img {
+            width: 100%;
+            height: 124px;
+
+            @include var.breakpoint(tablet) {
+                height: 264px;
+            }
+            @include var.breakpoint(pc) {
+                height: 500px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 85%;
+            }
+        }
+
+        .product__content__item-wrap {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            
+            .product__content__item {
+                width: 100%;
+                height: auto;
+                min-height: 176px;
+                margin-top: 30px;
+                display: flex;
+
+                @include var.breakpoint(tablet) {
+                    margin-top: 60px;
+                }
+
+                img {
+                    width: 45%;
+                    object-fit: contain;
+                    object-position: top;
+                }
+
+                p {
+                    width: 55%;
+                    padding-left: 10px;
+                }
+            }
+            
+            .product__content__item:last-child {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}

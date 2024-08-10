@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-search-btn {
+    width: auto;
+    flex-grow: 1;
+    background: linear-gradient(to right, #DED8D3, #F2EDE9);
+    border: solid 1px var.$gray;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var.$gray;
+}

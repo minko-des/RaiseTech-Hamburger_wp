@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-more-btn {
+    width: 50%;
+    height: 42px;
+    color: var.$gray;
+    background-color: white;
+    border-radius: 21px;
+    text-align: center;
+    line-height: 42px;
+}

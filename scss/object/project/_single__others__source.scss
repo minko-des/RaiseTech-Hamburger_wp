@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-single__others__source {
+    width: 90%;
+    height: 237px;
+    margin: 30px auto;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    line-height: 0.7;
+
+    @include var.breakpoint(tablet) {
+        margin-top: 60px;
+    }
+}

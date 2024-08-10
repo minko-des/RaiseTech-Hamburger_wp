@@ -1,0 +1,10 @@
+
+//メニュー表示時、スクロール禁止
+.u-noScroll--body {
+    overflow: hidden;
+}
+
+//.p-sidebarスクロールさせるための高さ定義
+.u-noScroll--sidebar {
+    height: 100vh;
+}

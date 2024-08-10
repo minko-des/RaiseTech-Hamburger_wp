@@ -16,7 +16,7 @@
         flex-direction: column;
         height: auto;
         overflow: hidden;
-
+       
         @include var.breakpoint(pc) {
             width: 80%;
         }
