@@ -371,7 +371,7 @@ ul, ol {
 .l-footer {
   width: 100%;
   height: 150px;
-  background-image: url(../../../images/footer-bg.jpg);
+  background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/footer-bg.jpg);
   background-position: center;
   background-repeat: repeat;
 }
@@ -884,12 +884,12 @@ ul, ol {
   margin-bottom: 0;
 }
 
-.p-service--takeout, .p-service--eatin {
+.p-service--takeout {
   width: 100%;
   height: auto;
   min-height: 642px;
   margin-top: 20px;
-  background-image: url(../../../images/service-content-takeout.jpg);
+  background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-takeout.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -898,19 +898,19 @@ ul, ol {
   position: relative;
 }
 @media (min-width: 750px) {
-  .p-service--takeout, .p-service--eatin {
+  .p-service--takeout {
     width: 47%;
     min-height: 680px;
   }
 }
 @media (min-width: 1250px) {
-  .p-service--takeout, .p-service--eatin {
+  .p-service--takeout {
     min-height: 1000px;
   }
 }
 
-.p-service--eatin {
-  background-image: url(../../../images/service-content-eatin.jpg);
+.second-item {
+  background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-eatin.jpg);
 }
 
 .p-service__title {

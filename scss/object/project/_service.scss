@@ -2,12 +2,13 @@
 @use "../../foundation/variables" as var;
 
 
-.p-service--takeout,.p-service--eatin {
+.p-service--takeout {
     width: 100%;
     height: auto;
     min-height: 642px;
     margin-top: 20px;
-    background-image: url(../../../images/service-content-takeout.jpg);
+    //background-image: url(../../../images/service-content-takeout.jpg);
+    background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-takeout.jpg);
     background-size: cover;
     background-position: center;  //左右上下共に中央
     background-repeat: no-repeat;
@@ -24,6 +25,6 @@
     }
 }
 
-.p-service--eatin {
-    background-image: url(../../../images/service-content-eatin.jpg);
+.second-item {
+    background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-eatin.jpg);
 }

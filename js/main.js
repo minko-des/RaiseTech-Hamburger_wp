@@ -13,6 +13,9 @@ $(document).ready(function() {
         $sidebarBg.addClass("u-overlay"); //背景色透明度0.5
         
         toggleBodyScroll();  //ボタンクリック時に関数を呼び出す
+
+        console.log("Script loaded");
+
     });
 
     //×ボタンクリックイベント
