@@ -1142,10 +1142,11 @@ ul, ol {
 }
 .p-sidebar__nav .sidebar__nav__list {
   font-size: 2.4rem;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
 }
-.p-sidebar__nav .sidebar__nav__list__item {
+.p-sidebar__nav .sidebar__nav__list .sub-menu {
   font-size: 2rem;
   font-weight: 400;
   padding: 35px 0 50px 20px;
@@ -1756,5 +1757,9 @@ ul, ol {
 .u-currentPage {
   background-color: #3C2B1C;
   color: white;
+}
+
+.post-categories {
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

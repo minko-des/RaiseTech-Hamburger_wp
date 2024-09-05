@@ -1,0 +1,8 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+//wordpressの出力関数で上書きされたスタイルの再定義
+.post-categories {  //the_category()関数で付与されたクラス
+    font-weight: 700;
+}

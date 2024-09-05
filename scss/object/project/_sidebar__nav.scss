@@ -9,10 +9,11 @@
 
     .sidebar__nav__list {
         font-size: 2.4rem;
+        font-weight: 700;
         display: flex;
         flex-direction: column;
 
-        &__item {
+        .sub-menu {  //ナビゲーションメニュー(wp_nav_menu())を使用のためクラス名を変えた(.sidebar__nav__list__itemから.sub-menu)
             font-size: 2.0rem;
             font-weight: 400;
             padding: 35px 0 50px 20px;

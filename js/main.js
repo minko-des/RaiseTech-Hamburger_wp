@@ -1,6 +1,6 @@
 
 /* ボタンクリックでサイドバーと背景の表示/非表示 */
-$(document).ready(function() {
+jQuery(document).ready(function($) {  //WordPressではデフォルトでjQueryがnoConflictモードで動作するため、他のライブラリとの競合を避けるために、通常 $ は jQuery として記述する必要があります
 
     const $menuBtn = $(".menu-btn");  //menuボタン
     const $sidebar = $(".p-sidebar");  //サイドバー

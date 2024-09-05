@@ -1,12 +1,7 @@
-
 <?php get_header(); ?>
             <main class="l-main">
                 <article class="p-main-visual">
                     <div class="main-visual__img">
-                        <!--
-                        <img class="main-visual__img--sp" src="./images/mainvisual-sp.jpg" alt="メインビジュアル スマホ">
-                        <img class="main-visual__img--pc" src="./images/mainvisual-pc@2x.jpg" alt="メインビジュアル パソコン">
-                        -->
                         <img class="main-visual__img--sp" src="<?php echo get_theme_file_uri('/images/mainvisual-sp.jpg'); ?>" alt="メインビジュアル スマホ">
                         <img class="main-visual__img--pc" src="<?php echo get_theme_file_uri('/images/mainvisual-pc@2x.jpg'); ?>" alt="メインビジュアル パソコン">
                     </div>
@@ -27,7 +22,7 @@
                         $counter = 0; //カウンターを初期化
                         while ($the_query->have_posts()) : $the_query->the_post();
                             $counter++; //カウンターをインクリメント、値を1ずつ増やす
-                            $class = ($counter == 2) ? " second-item" : ''; //2件目の投稿にクラスを追加
+                            $class = ($counter == 2) ? " second-item" : ''; //2件目の投稿に特定のクラスを追加
                         ?>
                         <li class="p-service--takeout<?php echo $class; ?>">
                             <div class="p-service__title">
@@ -37,14 +32,14 @@
                             <ul class="p-description-wrap">
                                 <li class="p-description">
                                     <dl class="description__list">
-                                        <dt><?php echo get_post_meta(get_the_ID(),'s_dr-1_dt',true); ?></dt>
-                                        <dd><?php echo get_post_meta(get_the_ID(),'s_dr_dd',true); ?></dd>
+                                        <dt><?php echo get_post_meta(get_the_ID(),'s_dr-1_dt',true); ?></dt> <!--trueは指定された値を文字列で返す-->
+                                        <dd><?php echo get_post_meta(get_the_ID(),'s_dr-1_dd',true); ?></dd>
                                     </dl>
                                 </li>
                                 <li class="p-description">
                                     <dl class="description__list">
                                         <dt><?php echo get_post_meta(get_the_ID(),'s_dr-2_dt',true); ?></dt>
-                                        <dd><?php echo get_post_meta(get_the_ID(),'s_dr_dd',true); ?></dd>
+                                        <dd><?php echo get_post_meta(get_the_ID(),'s_dr-2_dd',true); ?></dd>
                                     </dl>
                                 </li>
                             </ul>
