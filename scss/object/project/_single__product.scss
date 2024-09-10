@@ -5,7 +5,7 @@
 .p-single__product {
     width: 100%;
 
-    .product__content {
+    .wp-block-group__inner-container {
         width: 90%;
         height: auto;
         margin: 0 auto;
@@ -14,7 +14,8 @@
             margin-top: 60px;
         }
 
-        &__img {
+        .product__content__img figure { 
+            display: block;
             width: 100%;
             height: 124px;
 
@@ -36,34 +37,43 @@
         .product__content__item-wrap {
             width: 100%;
             height: auto;
-            display: flex;
-            flex-direction: column;
-            
-            .product__content__item {
-                width: 100%;
-                height: auto;
-                min-height: 176px;
-                margin-top: 30px;
+        
+            .wp-block-group__inner-container {
+                margin: 0 auto;
                 display: flex;
-
-                @include var.breakpoint(tablet) {
-                    margin-top: 60px;
-                }
-
-                img {
-                    width: 45%;
-                    object-fit: contain;
-                    object-position: top;
-                }
-
-                p {
-                    width: 55%;
-                    padding-left: 10px;
-                }
-            }
+                flex-direction: column;
             
-            .product__content__item:last-child {
-                flex-direction: row-reverse;
+                .wp-block-media-text {
+                    width: 100%;
+                    height: auto;
+                    min-height: 176px;
+                    margin-top: 30px;
+                    display: flex;
+
+                    @include var.breakpoint(tablet) {
+                        margin-top: 60px;
+                    }
+
+                    figure{
+                        width: 45%;
+                        align-self: flex-start;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            object-position: top;
+                        }
+                    }
+
+                    .wp-block-media-text__content {
+                        width: 55%;
+                        padding: 0;
+                        align-self: flex-start;
+                        p {
+                            padding: 0 10px;
+                        }
+                    }
+                }
             }
         }
     }

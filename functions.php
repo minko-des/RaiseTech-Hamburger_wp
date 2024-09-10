@@ -80,5 +80,4 @@ function readScript() {
 
         register_post_type( 'Service', $args ); //カスタム投稿タイプを作成する関数
     }
-
 ?>

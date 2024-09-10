@@ -6,8 +6,13 @@
     margin-top: 13px;
     padding-left: 5%;
 
+    .wp-block-group__inner-container
     .others__lists {
 
+        ol {
+            list-style-type: decimal;
+            list-style-position: inside; //数字マーカーをli要素内に入れる
+        }
         .others__lists__item {
             margin-bottom: 20px;
         }

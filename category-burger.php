@@ -32,7 +32,10 @@
                     </section>
                 </div>
 
-                <?php get_template_part('template-parts/pagination'); ?>
+                <section class="p-pagination">
+                    <?php get_template_part('template-parts/pagination'); ?>
+                </section>
+
             </main>
         </div>
         <?php get_sidebar(); ?>

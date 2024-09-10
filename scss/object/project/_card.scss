@@ -12,6 +12,7 @@
     @include var.breakpoint(tablet) {
         flex-direction: row;
         min-height: 355px;
+        max-height: 500px;
     }
     @include var.breakpoint(pc) {
         margin-bottom: 30px;
@@ -57,6 +58,7 @@
         }
 
         dl {
+            font-size: 1.6rem;
             margin-top: 24px;
             height: 100%;
 
@@ -64,12 +66,14 @@
                 margin-top: 48px;
             }
 
-            dt {
+            h2 { //dt
+                font-size: 1.6rem;
+
                 @include var.breakpoint(pc) {
                     font-size: 2.4rem;
                 }
             }
-            dd {
+            p { //dd
                 font-weight: 400;
                 margin-top: 9px;
 

@@ -4,34 +4,42 @@
 
 .p-single__others__btn {
     width: 100%;
-    
-    a {
-        display: block;
+    height: auto;
+
+    .is-style-fill {
         width: 90%;
         max-width: 429px;
         height: 81px;
         margin-left: 5%;
         margin-top: 60px;
-        background: linear-gradient(to left, #DED8D3, #F2EDE9);
-        text-align: center;
         line-height: 81px;
 
         @include var.breakpoint(tablet) {
             height: 104px;
             line-height: 104px;
+        }
 
+        .wp-element-button {
+            width: 100%;
+            background: linear-gradient(to left, #DED8D3, #F2EDE9);
+            border: solid 1px var.$gray;
+            border-radius: 20px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var.$gray;
+            padding: 0;
         }
     }
+}
 
-    p {
-        margin: 30px 0 70px 5%;
+.p-single__others__bottomtxt {
+    margin: 30px 0 70px 5%;
 
-        @include var.breakpoint(tablet) {
-            margin-top: 60px;
-            margin-bottom: 150px;
-        }
-        @include var.breakpoint(pc) {
-            margin-bottom: 276px;
-        }
+    @include var.breakpoint(tablet) {
+        margin-top: 60px;
+        margin-bottom: 150px;
+    }
+    @include var.breakpoint(pc) {
+        margin-bottom: 276px;
     }
 }

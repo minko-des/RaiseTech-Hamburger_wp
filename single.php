@@ -1,46 +1,26 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- レスポンシブに必要 -->
-    <title>single</title>
-    <meta name="description" content="ページの内容を表す文章を書く、検索結果のタイトル下に表示される">
-    <meta name="keywords" content="">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- Google Fonts Link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" href="#" sizes="16x16" type="image/png">  <!-- ファビコン読み込み -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jqueryのライブラリ読み込み -->
-    <script defer src="./js/main.js"></script>  <!-- javaScriptファイル読み込み -->
-</head>
-<body>
-    <div class="p-wrapper">
-        <div class="wrapper__main">
-
-            <header class="l-header">
-                <div class="p-header">
-                    <p class="header__heading c-heading--roboto">Hamburger</p>
-                    <button class="menu-btn c-heading--roboto"><span>Menu</span></button>
-                    <form class="p-search" method="get" action="#">
-                        <input class="c-search-box" name="s" type="text" placeholder="">
-                        <input class="c-search-btn" type="submit" value="検索">
-                    </form>
-                </div>
-            </header>
+<?php get_header(); ?>
 
             <main class="l-main">
-                
-                <section class="p-single__main-visual">
-                    <img class="main-visual__img" src="./images/single-main.jpg" alt="メインビジュアル スマホ">
+                <section class="p-single__main-visual">                  
+                    <div class="main-visual__img">
+                    <?php 
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail();   //投稿のアイキャッチ画像を出力
+                        } else {
+                            echo '<p>商品の写真</P>';
+                        }
+                    ?>
+                    </div>
                     <div class="main-visual__title">
-                        <h1 class="c-heading--roboto">h1 チーズバーガー</h1>
+                        <h1 class="c-heading--roboto"><?php the_title(); ?></h1>
                     </div>
                 </section>
 
                 <div class="single__content-area">
 
+                    <?php the_content(); ?>
+
+                    <!-- 
                     <section class="p-under-page__title c-heading--notosans">
                         <h2>見出しh2</h2>
                         <p>Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。</p>
@@ -63,6 +43,7 @@
                     <section class="p-single__product">
                         <div class="product__content">
                             <div class="product__content__img">
+                                
                                 <img src="./images/single-content.jpg" alt="商品写真">
                             </div>
                             <ul class="product__content__item-wrap">
@@ -175,61 +156,13 @@
                             <p class="c-heading--notosans">boldboldboldboldboldboldbold</p>
                         </div>
                     </section>
+                    -->
 
                 </div>
+
             </main>
         </div>
 
-        <aside class="l-sidebar">
-            <div class="p-sidebar">
-                <button class="c-close-btn"><span>クローズボタン</span></button>
-                <h2 class="sidebar__title c-heading--roboto">Menu</h2>
-                <nav class="p-sidebar__nav">
-                    <ul class="sidebar__nav__list">
-                        <li class="c-heading--notosans"><a href="#">バーガー</a>
-                            <ul class="sidebar__nav__list__item">
-                                <li><a href="#">ハンバーガー</a></li>
-                                <li><a href="#">チーズバーガー</a></li>
-                                <li><a href="#">テリヤキバーガー</a></li>
-                                <li><a href="#">アボカドバーガー</a></li>
-                                <li><a href="#">フィッシュバーガー</a></li>
-                                <li><a href="#">ベーコンバーガー</a></li>
-                                <li><a href="#">チキンバーガー</a></li>
-                            </ul>
-                        </li>
-                        <li class="c-heading--notosans"><a href="#">サイド</a>
-                            <ul class="sidebar__nav__list__item">
-                                <li><a href="#">ポテト</a></li>
-                                <li><a href="#">サラダ</a></li>
-                                <li><a href="#">ナゲット</a></li>
-                                <li><a href="#">コーン</a></li>
-                            </ul>
-                        </li>
-                        <li class="c-heading--notosans"><a href="#">ドリンク</a>
-                            <ul class="sidebar__nav__list__item">
-                                <li><a href="#">コーラ</a></li>
-                                <li><a href="#">ファンタ</a></li>
-                                <li><a href="#">オレンジ</a></li>
-                                <li><a href="#">アップル</a></li>
-                                <li><a href="#">紅茶<span>(Ice/Hot)</span></a></li>
-                                <li><a href="#">コーヒー<span>(Ice/Hot)</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-        <div class="p-sidebar__bg"></div>
+        <?php get_sidebar(); ?>
     </div>
-
-    <footer class="l-footer">
-        <div class="p-footer">
-            <p class="footer__nav">
-                <a href="#">ショップ情報</a><span class="footer__nav__vertical-line"></span><a href="#">ヒストリー</a>
-            </p>
-            <small class="c-copyright">Copyright: RaiseTech</small>
-        </div>
-    </footer>
-
-</body>
-</html>
+<?php get_footer(); ?>

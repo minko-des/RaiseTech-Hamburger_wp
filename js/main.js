@@ -75,4 +75,21 @@ jQuery(document).ready(function($) {  //WordPressではデフォルトでjQuery�
     $photoSet.append($img); //$photoSet要素に$img要素を追加
     }
 
+
+/*ページネーションのページ送りボタンのレイアウト変更関数
+  スマホ画面でページ戻りボタンが無い時ページ送りボタンの位置を調整する*/
+    const mediaQuerySp = window.matchMedia("(max-width: 750px)");
+    
+    pagenaviChange(mediaQuerySp);
+
+    mediaQuerySp.addEventListener("change", () => pagenaviChange(mediaQuerySp));
+
+    function pagenaviChange(e) {
+        if (e.matches && $('.previouspostslink').length === 0) {
+            $('.wp-pagenavi').css('flex-direction', 'row-reverse');
+        }else {
+            $('.wp-pagenavi').css('flex-direction', 'row');
+        }
+    }
+
 });
