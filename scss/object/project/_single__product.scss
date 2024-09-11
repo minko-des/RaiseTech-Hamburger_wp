@@ -39,14 +39,16 @@
             height: auto;
         
             .wp-block-group__inner-container {
-                margin: 0 auto;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
             
-                .wp-block-media-text {
+                .product__content__item {
                     width: 100%;
                     height: auto;
                     min-height: 176px;
+                    max-height: 400px;
+                    overflow: hidden;
                     margin-top: 30px;
                     display: flex;
 
@@ -54,14 +56,14 @@
                         margin-top: 60px;
                     }
 
-                    figure{
+                    .wp-block-media-text__media {
                         width: 45%;
+                        height: 100%;
                         align-self: flex-start;
                         img {
                             width: 100%;
                             height: 100%;
-                            object-fit: contain;
-                            object-position: top;
+                            object-fit: cover;
                         }
                     }
 

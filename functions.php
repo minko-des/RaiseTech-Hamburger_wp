@@ -80,4 +80,12 @@ function readScript() {
 
         register_post_type( 'Service', $args ); //カスタム投稿タイプを作成する関数
     }
+
+
+    // ブロックエディタに適用されるCSSを無効化
+    function remove_block_library_css() {
+        wp_dequeue_style('wp-block-library'); // すべてのブロックCSSを無効にする
+    }
+    add_action('wp_enqueue_scripts', 'remove_block_library_css');
+
 ?>

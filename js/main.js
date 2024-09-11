@@ -64,18 +64,6 @@ jQuery(document).ready(function($) {  //WordPressではデフォルトでjQuery�
     }
 
 
-
-/* 写真の複製処理 */
-    const $photoSet = $(".photo-set");
-    const imageUrl = "./images/single-content.jpg"; //画像のURL
-    const numberOfImages = "8"; //画像の数
-
-    for (let i = 0; i < numberOfImages; i++) { //ループ処理
-    const $img = $("<img>").attr("src", imageUrl).attr("alt", "写真一覧"); //新しいimg要素を生成し画像のパス、alt属性を設定、変数$imgに格納
-    $photoSet.append($img); //$photoSet要素に$img要素を追加
-    }
-
-
 /*ページネーションのページ送りボタンのレイアウト変更関数
   スマホ画面でページ戻りボタンが無い時ページ送りボタンの位置を調整する*/
     const mediaQuerySp = window.matchMedia("(max-width: 750px)");

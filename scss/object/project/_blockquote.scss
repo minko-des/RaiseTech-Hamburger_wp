@@ -17,10 +17,25 @@
         height: auto;
     }
 
-    cite { //p
+    cite { //.source
+        display: block;
         margin-top: 30px;
 
         a { //span
+            color: #4A6C9B;
+            border-bottom: 1px solid #4A6C9B;
+        }
+    }
+
+
+    //固定ページ用スタイル
+    blockquote {
+        width: 100%;
+        height: auto;
+    }
+    .source {
+        margin-top: 30px;
+        span {
             color: #4A6C9B;
             border-bottom: 1px solid #4A6C9B;
         }

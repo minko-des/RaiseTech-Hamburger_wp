@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-page__heading-container {
+    width: auto;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 36px;
+    padding-left: 5%;
+
+    @include var.breakpoint(tablet) {
+        height: 300px;
+        margin-top: 60px;
+    }
+}

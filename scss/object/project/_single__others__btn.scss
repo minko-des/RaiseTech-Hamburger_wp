@@ -6,7 +6,7 @@
     width: 100%;
     height: auto;
 
-    .is-style-fill {
+    .wp-block-button {
         width: 90%;
         max-width: 429px;
         height: 81px;
@@ -19,14 +19,17 @@
             line-height: 104px;
         }
 
-        .wp-element-button {
+        a {
+            display: block;
             width: 100%;
-            background: linear-gradient(to left, #DED8D3, #F2EDE9);
-            border: solid 1px var.$gray;
-            border-radius: 20px;
+            height: 100%;
             font-size: 1.6rem;
             font-weight: 700;
             color: var.$gray;
+            text-align: center;
+            background: linear-gradient(to left, #DED8D3, #F2EDE9);
+            border-radius: 20px;
+            border: solid 1px var.$gray;
             padding: 0;
         }
     }
