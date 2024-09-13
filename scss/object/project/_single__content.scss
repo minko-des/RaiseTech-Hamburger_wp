@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+//投稿ページのコンテンツ（ブロックエディタ）のスタイル
+.p-single__content {
+    padding: 32px 5% 70px 5%;
+    @include var.breakpoint(tablet) {
+        padding-top: 39px;
+        padding-bottom: 150px;
+    }
+    @include var.breakpoint(pc) {
+        padding-top: 63px;
+        padding-bottom: 276px;
+    }
+
+
+    h2 {      
+        color: var.$brown_txt;
+        @include var.breakpoint(tablet) {
+            font-size: 3.6rem;
+        }
+    }
+    h2+p,h3+p,h4+p,h5+p,h6+p {
+        font-weight: 400;
+        margin-top: 29px;
+        color: var.$brown_txt;
+        @include var.breakpoint(tablet) {
+            margin-top: 60px;
+        }
+    }
+
+    h3,h4,h5,h6 {
+        margin-top: 35px;
+    }
+
+
+    //最初の画像
+    .wp-block-image {
+        width: 100%;
+        height: 124px;
+        margin-top: 30px;
+
+        @include var.breakpoint(tablet) {
+            height: 264px;
+            margin-top: 60px;
+        }
+        @include var.breakpoint(pc) {
+            height: 500px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 85%;
+        }
+    }
+
+
+    //２カラム（メディア/テキスト）
+    .wp-block-media-text { //.product__content__item
+        width: 100%;
+        min-height: 176px;
+        overflow: hidden;
+        margin-top: 30px;
+        display: flex;
+
+        @include var.breakpoint(tablet) {
+            margin-top: 60px;
+        }
+
+        .wp-block-media-text__media {
+            width: 45%;
+            height: 100%;
+            max-height: 400px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .wp-block-media-text__content {
+            width: 55%;
+            padding: 0 10px;
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+
+
+    //ギャラリー
+    .wp-block-gallery {
+        height: auto;
+        margin: 30px auto 0 auto;
+
+        @include var.breakpoint(tablet) {
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .wp-block-image {
+            width: 100%;
+            height: 205px;
+            margin: 0 0 20px 0;
+
+            @include var.breakpoint(tablet) {
+                width: 48%;
+            }
+            @include var.breakpoint(pc) {
+                width: 31%;
+                height: 257px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .wp-block-image:first-child{
+            width: 70%;
+            height: auto;
+            margin: 0 auto 30px auto;
+            
+            @include var.breakpoint(tablet) {
+                //width: 580px;
+                margin-bottom: 240px;
+            }
+            @include var.breakpoint(pc) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+
+    //リスト
+    ul:first-of-type {
+        margin-top: 13px;
+    }
+    
+    .wp-block-list {
+    
+        li:nth-child(4) {
+            margin: 20px 0;
+        }
+    
+        li .wp-block-list {
+            margin-left: 18px;
+            margin-top: 0;
+        }
+    }
+    
+    ol:first-of-type {
+        margin-top: 60px;
+    }
+
+
+    //ソースコード
+    .wp-block-code { //.p-single__others__source
+        width: 100%;
+        padding: 50px 0;
+        margin-top: 30px;
+        background-color: #F5F5F5;
+        display: flex;
+        align-items: center;
+    
+        @include var.breakpoint(tablet) {
+            margin-top: 60px;
+        }
+    
+        code {
+            margin-left: 50px;
+        }
+    }
+
+
+    //テーブル
+    .wp-block-table {
+        width: 100%;
+        margin-top: 30px;
+    
+        @include var.breakpoint(tablet) {
+            margin-top: 50px;
+        }
+    
+        table { //.p-single__others__table
+            width: 100%;
+            border-collapse: collapse; //セルの同じ個所の境界線を１本にまとめる
+    
+            tbody { //<table>要素
+                color: var.$brown_txt;
+                background-color: #ffff;
+                
+                tr {
+                    width: 100%;
+                    height: 77px;
+    
+                    td {
+                        border: 1px solid var.$gray;
+                        padding-left: 6%;
+                    }
+                    td:nth-child(1) {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    //ボタン
+    .wp-block-buttons { //.p-single__others__btn
+        width: 100%;
+        height: auto;
+    
+        .wp-block-button {
+            width: 90%;
+            max-width: 429px;
+            height: 81px;
+            margin-top: 60px;
+            line-height: 81px;
+    
+            @include var.breakpoint(tablet) {
+                height: 104px;
+                line-height: 104px;
+            }
+    
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: var.$gray;
+                text-align: center;
+                background: linear-gradient(to left, #DED8D3, #F2EDE9);
+                border-radius: 20px;
+                border: solid 1px var.$gray;
+                padding: 0;
+            }
+        }
+    }
+    
+
+    //最後のテキスト
+    p:last-child {
+        margin-top: 30px;
+    
+        @include var.breakpoint(tablet) {
+            margin-top: 60px;
+        }
+    }
+}

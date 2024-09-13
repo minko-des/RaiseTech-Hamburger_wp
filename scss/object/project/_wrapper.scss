@@ -16,6 +16,7 @@
         flex-direction: column;
         height: auto;
         overflow: hidden;
+        background-color: var.$ivory;
        
         @include var.breakpoint(pc) {
             width: 80%;

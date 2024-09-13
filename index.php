@@ -1,16 +1,11 @@
-
 <?php get_header(); ?>
             <main class="l-main">
                 <article class="p-main-visual">
                     <div class="main-visual__img">
-                        <!--
-                        <img class="main-visual__img--sp" src="./images/mainvisual-sp.jpg" alt="メインビジュアル スマホ">
-                        <img class="main-visual__img--pc" src="./images/mainvisual-pc@2x.jpg" alt="メインビジュアル パソコン">
-                        -->
                         <img class="main-visual__img--sp" src="<?php echo get_theme_file_uri('/images/mainvisual-sp.jpg'); ?>" alt="メインビジュアル スマホ">
                         <img class="main-visual__img--pc" src="<?php echo get_theme_file_uri('/images/mainvisual-pc@2x.jpg'); ?>" alt="メインビジュアル パソコン">
                     </div>
-                    <h1 class="main-visual__heading c-heading--notosans">ダミーサイト</h1>
+                    <h1 class="main-visual__heading c-heading--notosans">ダミーサイト（indexﾌｧｲﾙ）</h1>
                 </article>
                 
                 <div class="p-content-wrap">
@@ -22,33 +17,13 @@
                     $the_query = new WP_Query($args); ?>
                     <?php if ($the_query->have_posts()) : ?>
 
-                    <ul class="p-content">
+                    <ul class="content">
                         <?php
-                        $counter = 0; //カウンターを初期化
                         while ($the_query->have_posts()) : $the_query->the_post();
-                            $counter++; //カウンターをインクリメント、値を1ずつ増やす
-                            $class = ($counter == 2) ? " second-item" : ''; //2件目の投稿にクラスを追加
                         ?>
-                        <li class="p-service--takeout<?php echo $class; ?>">
-                            <div class="p-service__title">
-                                <h2 class="service__title__label c-heading--roboto"><?php the_title(); ?></h2>
-                                <div class="c-line"></div>
-                            </div>
-                            <ul class="p-description-wrap">
-                                <li class="p-description">
-                                    <dl class="description__list">
-                                        <dt><?php echo get_post_meta(get_the_ID(),'s_dr-1_dt',true); ?></dt>
-                                        <dd><?php echo get_post_meta(get_the_ID(),'s_dr_dd',true); ?></dd>
-                                    </dl>
-                                </li>
-                                <li class="p-description">
-                                    <dl class="description__list">
-                                        <dt><?php echo get_post_meta(get_the_ID(),'s_dr-2_dt',true); ?></dt>
-                                        <dd><?php echo get_post_meta(get_the_ID(),'s_dr_dd',true); ?></dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </li>
+
+                        <?php get_template_part('template-parts/service'); ?>
+
                         <?php endwhile; ?>
                     </ul>
                     
@@ -57,7 +32,6 @@
                         <p>まだ作品がありません。</p>
                     <?php endif; ?>
                 </div>
-
 
                 <article class="p-access">
                     <img class="access__img" src="<?php echo get_theme_file_uri('/images/map.jpg'); ?>" alt="マップ画像">
@@ -71,9 +45,6 @@
                 </article>
             </main>
         </div>
-
         <?php get_sidebar(); ?>
-        
     </div>
-
-<?php get_footer(); ?>    
+<?php get_footer(); ?>

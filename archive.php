@@ -8,29 +8,27 @@
                     </div>
                     <div class="main-visual__title">
                         <h1 class="c-heading--roboto">Menu:</h1>
-                        <p class="c-heading--notosans"></p>
+                        <p class="c-heading--notosans">カテゴリ</p>
                     </div>
                 </section>
 
-                <div class="archive__content-area">
-                    <section class="p-under-page__title c-heading--notosans">
-                        <h2>小見出しが入ります</h2>
-                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    </section>
-                    <section class="p-archive__main-content">
-                        <ul class="card-list">
-                            <?php
-                            if (have_posts()) :
-                                while (have_posts()) : the_post();
-                            ?>
-                            <?php get_template_part('template-parts/post-card'); ?>
-                                <?php endwhile; ?>
-                            <?php else : ?>
-                                <p>投稿がありません</p>
-                            <?php endif ; ?>
-                        </ul>
-                    </section>
-                </div>
+                <section class="p-archive__title c-heading--notosans">
+                    <h2>小見出しが入ります</h2>
+                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </section>
+                <section class="p-archive__content">
+                    <ul class="card-list">
+                        <?php
+                        if (have_posts()) :
+                            while (have_posts()) : the_post();
+                        ?>
+                        <?php get_template_part('template-parts/post-card'); ?>
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            <p>投稿がありません</p>
+                        <?php endif ; ?>
+                    </ul>
+                </section>
 
                 <section class="p-pagination">
                     <?php get_template_part('template-parts/pagination'); ?>

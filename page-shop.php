@@ -17,7 +17,7 @@ Template Name: Shop Page
                     </div>
                 </section>
 
-                <div class="single__content-area">
+                <div class="p-single__content">
 
                     <?php the_content(); ?>
 

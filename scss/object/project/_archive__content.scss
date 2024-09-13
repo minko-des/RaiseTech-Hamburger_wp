@@ -2,16 +2,16 @@
 @use "../../foundation/variables" as var;
 
 
-.p-archive__main-content {
+.p-archive__content {
     width: 100%;
     height: auto;
-    padding-top: 20px;
+    margin-top: 20px;
 
     @include var.breakpoint(tablet) {
-        padding-top: 37px;
+        margin-top: 37px;
     }
     @include var.breakpoint(pc) {
-        padding-top: 70px;
+        margin-top: 70px;
     }
 
     .card-list {

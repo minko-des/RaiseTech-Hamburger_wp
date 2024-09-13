@@ -4,7 +4,7 @@
         if (has_post_thumbnail()) {
             the_post_thumbnail();   //投稿のアイキャッチ画像を出力
         } else {
-            echo '<p>商品の写真</P>';
+            echo '<p>商品の写真</p>';
         }
         ?>
     </figure>

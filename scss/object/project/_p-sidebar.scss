@@ -37,4 +37,39 @@
         font-size: 3.4rem;
         margin-left: 12.5%;
     } 
+
+    .p-sidebar__nav {
+        width: 100%;
+        padding-top: 90px;
+        padding-left: 12.5%;
+    
+        .sidebar__nav__list {
+            font-size: 2.4rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+    
+            .sub-menu {  //ナビゲーションメニュー(wp_nav_menu())を使用のためクラス名を変えた(.sidebar__nav__list__itemから.sub-menu)
+                font-size: 2.0rem;
+                font-weight: 400;
+                padding: 35px 0 50px 20px;
+                line-height: 5.0rem;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+//サイドバーの背景
+.p-sidebar__bg {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    visibility: hidden;
 }

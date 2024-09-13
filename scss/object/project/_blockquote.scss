@@ -2,11 +2,10 @@
 @use "../../foundation/variables" as var;
 
 
-.p-blockquote {
-    width: 90%;
+.wp-block-quote { //p-blockquote
     background-color: #f5f5f5;
     padding: 30px 5%;
-    margin: 30px auto;
+    margin: 30px auto 0 auto;
 
     @include var.breakpoint(tablet) {
         margin-top: 60px;

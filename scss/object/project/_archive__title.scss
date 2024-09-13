@@ -2,14 +2,11 @@
 @use "../../foundation/variables" as var;
 
 
-    .p-under-page__title {
-    width: 100%;
-    color: var.$brown_txt;
-    display: flex;
-    flex-direction: column;
-    margin-top: 32px;
-    padding: 0 5%;
 
+//テスト用ファイル確認して修正したコード
+.p-archive__title {
+    width: 90%;
+    margin: 32px auto 0 auto;
     @include var.breakpoint(tablet) {
         margin-top: 39px;
     }
@@ -18,15 +15,16 @@
     }
 
     h2 {      
+        color: var.$brown_txt;
         @include var.breakpoint(tablet) {
             font-size: 3.6rem;
         }
     }
 
-    p {
+    h2+p {
         font-weight: 400;
         margin-top: 29px;
-
+        color: var.$brown_txt;
         @include var.breakpoint(tablet) {
             margin-top: 60px;
         }

@@ -23,40 +23,28 @@
 
 //object_project
 @use "object/project/content-wrap";
-@use "object/project/content";
-@use "object/project/description-wrap";
-@use "object/project/description";
 @use "object/project/p-header";
 @use "object/project/main-visual";
 @use "object/project/archive__main-visual";
-@use "object/project/archive__main-content";
+@use "object/project/archive__content";
+@use "object/project/archive__title";
 @use "object/project/card";
 @use "object/project/service";
-@use "object/project/service__title";
 @use "object/project/access";
-@use "object/project/access__text";
 @use "object/project/p-footer";
 @use "object/project/p-sidebar";
-@use "object/project/sidebar__nav";
 @use "object/project/wrapper";
-@use "object/project/sidebar__bg";
-@use "object/project/under-page__title";
+@use "object/project/single__content";
 @use "object/project/pagination";
 @use "object/project/single__main-visual";
-@use "object/project/single__heading-container";
 @use "object/project/blockquote";
-@use "object/project/single__product";
-@use "object/project/single__photo-list";
-@use "object/project/single__others__lists-wrap";
-@use "object/project/single__others__source";
-@use "object/project/single__others__table";
-@use "object/project/single__others__btn";
 @use "object/project/page__main-visual";
 @use "object/project/page__heading-container";
 @use "object/project/page__product";
 @use "object/project/page__photo-list";
 @use "object/project/page__others";
 @use "object/project/search";
+@use "object/project/page404";
 
 //object_utility
 @use "object/utility/open";
