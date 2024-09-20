@@ -3,8 +3,7 @@
             <main class="l-main">
                 <section class="p-archive__main-visual">
                     <div class="main-visual__img">
-                        <img class="main-visual__img--sp" src="<?php echo get_theme_file_uri('/images/drink_apple.jpg'); ?>" alt="メインビジュアル スマホ">
-                        <img class="main-visual__img--pc" src="<?php echo get_theme_file_uri('/images/drink_apple.jpg'); ?>" alt="メインビジュアル パソコン">
+                        <img class="main-visual__img--sp" src="<?php echo get_theme_file_uri('/images/drink_apple.jpg.webp'); ?>" alt="メインビジュアル スマホ">
                     </div>
                     <div class="main-visual__title">
                         <h1 class="c-heading--roboto">Menu:</h1>

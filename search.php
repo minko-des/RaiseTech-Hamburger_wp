@@ -4,7 +4,6 @@
                 <section class="p-archive__main-visual">
                     <div class="main-visual__img">
                         <img class="main-visual__img--sp" src="<?php echo get_theme_file_uri('/images/page-title_arcive@2x.jpg'); ?>" alt="メインビジュアル スマホ">
-                        <img class="main-visual__img--pc" src="<?php echo get_theme_file_uri('/images/page-title_arcive_pc.jpg'); ?>" alt="メインビジュアル パソコン">
                     </div>
                     <div class="main-visual__title">
                         <h1 class="c-heading--roboto">Search:</h1>

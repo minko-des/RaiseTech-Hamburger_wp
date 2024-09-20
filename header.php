@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
+<html lang="<?php language_attributes(); ?>"> <!-- 管理画面から使用言語を変更する -->
 <head>
     <meta charset="<?php bloginfo('UTF-8'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- レスポンシブに必要 -->
-    <title><?php bloginfo('name'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="keywords" content="ページに関連するキーワードを記述">
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?> <!-- 他のプラグインやスクリプトがここに適切なコンテンツやコードを挿入できるようになります。 -->
     <div class="p-wrapper">
         <div class="wrapper__main">
 

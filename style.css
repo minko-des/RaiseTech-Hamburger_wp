@@ -1,12 +1,37 @@
 /*
-  Theme Name: RaiseTech-Hamburger     //テーマの名前
-  Description: テーマ開発練習用テーマ    //テーマの説明
-  Version: 1.0.0        //バージョン
-  Theme URI:      //テーマの URL
-  Author: minko         //作った人の名前
-  Author URI:     //作った人の URL
-  Tags:           //テーマのタイプ、公式サイトでテーマが表示されたときに検索の絞り込みで使うもの
-  License:        //ライセンス（WordPressのテーマやプラグインを公開して配布する場合、ライセンスはGPLになります。）
-  License URI:    //ライセンスの URL
-  Text Domain:    //テキストドメイン（翻訳させたい箇所を指示する際に使います。テーマディレクトリ名を入れます。）
+  Theme Name: raisetech-hamburger_wp
+  Description: テーマの説明　開発練習用テーマ
+  Version: 1.0.0
+  Theme URI:
+  Author: minko
+  Author URI:
+  Tags: custom-background, custom-logo
+  License: GPL
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Copyright (C) 2024 minko. All rights reserved.
+  Text Domain: raisetech-hamburger_wp
+  Tested up to: 6.6
+  Requires PHP: 8.1
 */
+
+
+/* スクリーンリーダー用 */
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.screen-reader-text:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}

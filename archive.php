@@ -34,6 +34,12 @@
                     <?php get_template_part('template-parts/pagination'); ?>
                 </section>
 
+                <?php
+                //ページネーションコードの推奨を解消するために記述
+                the_posts_pagination(); 
+                ?>
+
+
             </main>
         </div>
         <?php get_sidebar(); ?>

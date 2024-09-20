@@ -2,92 +2,12 @@
 @use "../../foundation/variables" as var;
 
 
-.p-service {
+.type-service {
     width: 100%;
     height: auto;
     min-height: 642px;
     margin-top: 20px;
-    background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-takeout.jpg);
-    background-size: cover;
-    background-position: center;  //左右上下共に中央
-    background-repeat: no-repeat;
 
-    a {
-        height: 100%;
-        min-height: 642px;
-        display: flex;
-        align-items: flex-end;  //子要素description-wrapを下端に配置
-        position: relative;   
-
-        .p-service__title {
-            position: absolute;
-            top: 2%;
-            left: 4.5%;
-            display: flex;
-            flex-direction: column;
-            
-            .service__title__label {
-                color: #ffff;
-                font-size: 4.1rem;
-        
-                @include var.breakpoint(tablet) {
-                    font-size: 4.4rem;
-                }
-                @include var.breakpoint(pc) {
-                    font-size: 8.0rem;
-                }
-            }
-        
-            .c-line {
-                width: 34px;
-                margin-top: 20px;
-        
-                @include var.breakpoint(tablet) {
-                    width: 36px;
-                }
-                @include var.breakpoint(pc) {
-                    width: 63px;
-                }
-            }
-        }
-        
-        .p-description-wrap {
-            width: 100%;
-            height: auto;
-            padding: 16px;
-            margin-top: 200px;
-            display: flex;
-            flex-direction: column;
-        
-            .p-description {
-                width: 100%;
-                height: auto;
-                padding: 16px;
-                margin-top: 16px;
-                background-color: rgba(255, 255, 255, 0.8);
-            
-                .description__list {
-                    font-family: "Noto Sans", sans-serif;
-                    color: var.$brown_txt;
-                
-                    dt {
-                        font-size: 2.2rem;
-                        font-weight: 700;
-                        margin-bottom: 8px;
-                
-                        @include var.breakpoint(pc) {
-                            font-size: 2.4rem;
-                        }
-                    }
-                
-                    dd {
-                        line-height: 1.5;
-                    }
-                }
-            }
-        }
-    }
-    
     @include var.breakpoint(tablet) {
         width: 47%;
         min-height: 680px;
@@ -95,8 +15,93 @@
     @include var.breakpoint(pc) {
         min-height: 1000px;
     }
+
+    .p-service {
+        width: 100%;
+        height: 100%;
+        background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-takeout.jpg.webp);
+        background-size: cover;
+        background-position: center;  //左右上下共に中央
+        background-repeat: no-repeat;
+
+        a {
+            height: 100%;
+            min-height: 642px;
+            display: flex;
+            align-items: flex-end;  //子要素description-wrapを下端に配置
+            position: relative;   
+
+            .p-service__title {
+                position: absolute;
+                top: 2%;
+                left: 4.5%;
+                display: flex;
+                flex-direction: column;
+                
+                .service__title__label {
+                    color: #ffff;
+                    font-size: 4.1rem;
+            
+                    @include var.breakpoint(tablet) {
+                        font-size: 4.4rem;
+                    }
+                    @include var.breakpoint(pc) {
+                        font-size: 8.0rem;
+                    }
+                }
+            
+                .c-line {
+                    width: 34px;
+                    margin-top: 20px;
+            
+                    @include var.breakpoint(tablet) {
+                        width: 36px;
+                    }
+                    @include var.breakpoint(pc) {
+                        width: 63px;
+                    }
+                }
+            }
+            
+            .p-description-wrap {
+                width: 100%;
+                height: auto;
+                padding: 16px;
+                margin-top: 200px;
+                display: flex;
+                flex-direction: column;
+            
+                .p-description {
+                    width: 100%;
+                    height: auto;
+                    padding: 16px;
+                    margin-top: 16px;
+                    background-color: rgba(255, 255, 255, 0.8);
+                
+                    .description__list {
+                        font-family: "Noto Sans", sans-serif;
+                        color: var.$brown_txt;
+                    
+                        dt {
+                            font-size: 2.2rem;
+                            font-weight: 700;
+                            margin-bottom: 8px;
+                    
+                            @include var.breakpoint(pc) {
+                                font-size: 2.4rem;
+                            }
+                        }
+                    
+                        dd {
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-.p-service:last-child {
+.type-service:last-child .p-service {
     background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-eatin.jpg);
 }

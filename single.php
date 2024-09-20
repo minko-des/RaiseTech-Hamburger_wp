@@ -3,16 +3,21 @@
             <main class="l-main">
                 <section class="p-single__main-visual">                  
                     <div class="main-visual__img">
-                    <?php 
+                        <?php 
                         if (has_post_thumbnail()) {
-                            the_post_thumbnail();   //投稿のアイキャッチ画像を出力
-                        } else {
-                            echo '<p>商品の写真</p>';
-                        }
-                    ?>
+                            the_post_thumbnail();
+                        } else { ?>
+                            <p class="u-no-posts">no image</p>
+                        <?php } ?>
+                    
                     </div>
                     <div class="main-visual__title">
                         <h1 class="c-heading--roboto"><?php the_title(); ?></h1>
+                        
+                        <div class="tags">
+                            <?php the_tags(); ?>
+                        </div>
+
                     </div>
                 </section>
 
