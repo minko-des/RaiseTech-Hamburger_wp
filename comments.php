@@ -4,7 +4,6 @@ wp_list_comments( array(
 ) );
 ?>
 
-
 <?php
 // コメントが開いているか確認
 if ( comments_open() ) {
@@ -12,6 +11,5 @@ if ( comments_open() ) {
     comment_form();
 }
 ?>
-
 
 <?php the_comments_navigation(); ?>

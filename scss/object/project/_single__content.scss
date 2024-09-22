@@ -139,7 +139,10 @@
 
     //リスト
     ul:first-of-type {
-        margin-top: 13px;
+        margin-top: 33px;
+        @include var.breakpoint(tablet) {
+            margin-top: 54px;
+        }
     }
     
     .wp-block-list {
@@ -254,4 +257,19 @@
             margin-top: 60px;
         }
     }
+}
+
+
+
+//theme check 推奨項目の解消のため記述
+.wp-caption,
+.wp-caption-text,
+.sticky,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft {width: auto;}
+
+.comment-respond {
+    display: none;
 }

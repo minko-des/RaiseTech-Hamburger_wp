@@ -57,7 +57,7 @@
         }       
     }
 
-    .p-access__text {
+    .access__text {
         width: 100%;
         height: auto;
         padding: 40px 12%;
@@ -70,7 +70,7 @@
             width: 60%;
         }
     
-        .access__text__title {
+        .access__text-title {
             font-size: 3.0rem;
     
             @include var.breakpoint(pc) {

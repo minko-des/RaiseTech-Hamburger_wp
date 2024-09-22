@@ -1,7 +1,6 @@
 <?php get_header(); ?>
             
             <main class="l-main">
-                
                 <div class="p-page404">
                     <div class="p-page404__title">
                         <h1>404</h1>
@@ -12,13 +11,12 @@
                             URLが間違っているか、ページが存在しません。
                         </p>
                     </div>
-                
                     <div class="p-page404__btn .c-search-btn">
-                        <a href="<?php echo esc_url( home_url('/') ); ?>" class="c-search-btn"><span>TOPページへ戻る</span></a>
+                        <a href="<?php echo esc_url( home_url('/') ); ?>" class="c-search-btn"><span><?php echo esc_html__( 'Back to Top Page', 'raisetech-hamburger_wp' ); ?></span></a>
                     </div>
                 </div>
-
             </main>
+            
         </div>
         <?php get_sidebar(); ?>
     </div>

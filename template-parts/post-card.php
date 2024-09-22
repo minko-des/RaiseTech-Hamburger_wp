@@ -3,10 +3,9 @@
         <?php 
         if (has_post_thumbnail()) {
             the_post_thumbnail();   //投稿のアイキャッチ画像を出力
-        } else {
-            echo '<p>商品の写真</p>';
-        }
-        ?>
+        } else { ?>
+            <p class="u-no-post">No image</p>
+        <?php } ?>
     </figure>
 
     <div class="card__text c-heading--notosans">
@@ -14,7 +13,6 @@
         <dl>
             <?php
             $content = get_the_content();  // 投稿のコンテンツを取得
-
             $h2_match = '';
             $p_match = '';
             

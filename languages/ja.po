@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2024-09-20 19:49+0900\n"
-"PO-Revision-Date: 2024-09-20 19:49+0900\n"
+"POT-Creation-Date: 2024-09-22 09:18+0900\n"
+"PO-Revision-Date: 2024-09-22 09:19+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -14,100 +14,50 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_html__\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: front-page.php:8
+#: 404.php:15
+msgid "Back to Top Page"
+msgstr "トップページへ戻る"
+
+#: category-burger.php:10
+msgid "Burger"
+msgstr "バーガー"
+
+#: category-drink.php:10
+msgid "Drink"
+msgstr "ドリンク"
+
+#: category-side.php:10
+msgid "Side"
+msgstr "サイド"
+
+#: front-page.php:9
 msgid "Dammy Site"
 msgstr "ダミーサイト"
 
-#: front-page.php:34
-msgid "There are no works yet."
-msgstr "まだ作品はありません。"
-
-#: functions.php:34
+#: functions.php:35
 msgid "Custom Style"
 msgstr "カスタムスタイル"
 
-#: functions.php:40
+#: functions.php:41
 msgid "My Block Pattern"
 msgstr "ブロックパターン名"
 
-#: functions.php:43
+#: functions.php:44
 msgid "This is a custom block pattern."
 msgstr "カスタムブロックパターン."
 
-#: functions.php:49
+#: functions.php:48
 msgid "footer navigation"
 msgstr "フッターナビゲーション"
 
-#: functions.php:50
+#: functions.php:49
 msgid "category navigation"
 msgstr "カテゴリナビゲーション"
+
+#: search.php:28
+msgid "There are no articles"
+msgstr "記事がありません"
 
 #: searchform.php:3
 msgid "search"
 msgstr "検索"
-
-#~ msgid "HamBurger"
-#~ msgstr "ハンバーガー"
-
-#~ msgid "Cheese Burger"
-#~ msgstr "チーズバーガー"
-
-#~ msgid "Teriyaki Burger"
-#~ msgstr "テリヤキバーガー"
-
-#~ msgid "Avocado Burger"
-#~ msgstr "アボカドバーガー"
-
-#~ msgid "Fish Burger"
-#~ msgstr "フィッシュバーガー"
-
-#~ msgid "Bacon Burger"
-#~ msgstr "ベーコンバーガー"
-
-#~ msgid "Chicken Burger"
-#~ msgstr "チキンバーガー"
-
-#~ msgid "Potato"
-#~ msgstr "ポテト"
-
-#~ msgid "Salad"
-#~ msgstr "サラダ"
-
-#~ msgid "Nugget"
-#~ msgstr "ナゲット"
-
-#~ msgid "Cone"
-#~ msgstr "コーン"
-
-#~ msgid "Cola"
-#~ msgstr "コーラ"
-
-#~ msgid "Fanta"
-#~ msgstr "ファンタ"
-
-#~ msgid "Orange"
-#~ msgstr "オレンジ"
-
-#~ msgid "Apple"
-#~ msgstr "アップル"
-
-#~ msgid "Tea"
-#~ msgstr "紅茶(Ice/Hot)"
-
-#~ msgid "Coffee"
-#~ msgstr "コーヒー(Ice/Hot)"
-
-#~ msgid "Burger"
-#~ msgstr "バーガー"
-
-#~ msgid "Side"
-#~ msgstr "サイド"
-
-#~ msgid "Drink"
-#~ msgstr "ドリンク"
-
-#~ msgid "Shop Info"
-#~ msgstr "ショップ情報"
-
-#~ msgid "History"
-#~ msgstr "ヒストリー"

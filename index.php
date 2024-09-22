@@ -2,8 +2,8 @@
             <main class="l-main">
                 <article class="p-main-visual">
                     <div class="main-visual__img">
-                        <img class="main-visual__img--sp" src="<?php echo get_theme_file_uri('/images/mainvisual-sp.jpg'); ?>" alt="メインビジュアル スマホ">
-                        <img class="main-visual__img--pc" src="<?php echo get_theme_file_uri('/images/mainvisual-pc@2x.jpg'); ?>" alt="メインビジュアル パソコン">
+                        <img class="main-visual__img--sp" src="<?php echo esc_url(get_theme_file_uri('/images/mainvisual-sp.jpg') ); ?>" alt="メインビジュアル スマホ">
+                        <img class="main-visual__img--pc" src="<?php echo esc_url(get_theme_file_uri('/images/mainvisual-pc@2x.jpg') ); ?>" alt="メインビジュアル パソコン">
                     </div>
                     <h1 class="main-visual__heading c-heading--notosans">ダミーサイト（indexﾌｧｲﾙ）</h1>
                 </article>
@@ -34,7 +34,7 @@
                 </div>
 
                 <article class="p-access">
-                    <img class="access__img" src="<?php echo get_theme_file_uri('/images/map.jpg'); ?>" alt="マップ画像">
+                    <img class="access__img" src="<?php echo esc_url(get_theme_file_uri('/images/map.jpg') ); ?>" alt="マップ画像">
                     <div class="overlay--all"></div>
                     <div class="overlay--half"></div>
                     <div class="p-access__text">

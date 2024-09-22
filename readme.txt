@@ -1,12 +1,12 @@
-=== Hamburger ===
+=== raisetech-hamburger_wp ===
 Contributors: minko
 Tags: Hamburger
-Requires at least: 動作するWordPressの最低バージョン
-Tested up to: 検証した最新のWordPressのバージョン	
+Requires at least: 6.6
+Tested up to: 6.6	
 Version: 1.0
-License: ライセンスの種類
-License URI: ライセンスの詳細を記載したURL
-Requires PHP: 必要なPHPのバージョン
+License: GPL
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP: 8.1
 
 == 説明 ==
 

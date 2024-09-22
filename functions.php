@@ -10,7 +10,6 @@ function custom_theme_support() {
     ) );
     add_theme_support( 'post-thumbnails' );  //投稿ページでアイキャッチ画像を扱えるようにする
     add_theme_support( 'title-tag' );        //テーマにタイトルタグのサポートを許可する
-    
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'custom-logo', array(
@@ -25,13 +24,15 @@ function custom_theme_support() {
     ));
     add_theme_support( 'align-wide' );
     add_theme_support( 'custom-header' );
-
+    add_theme_support( 'editor-styles' );
+    add_editor_style();
+    add_theme_support( 'automatic-feed-links' );  //RSSフィードリンクを自動的に追加する
 
     register_block_style(
         'core/paragraph', //ブロックタイプの指定（段落ブロック）
         array(
             'name' => 'custom-style',
-            'label' => __('Custom Style', 'raisetech-hamburger_wp'),
+            'label' => __( 'Custom Style', 'raisetech-hamburger_wp' ),
         )
     );
     register_block_pattern(
@@ -43,20 +44,13 @@ function custom_theme_support() {
             'content'     => '<!-- wp:paragraph --><p>' . __( 'This is a custom block pattern.', 'raisetech-hamburger_wp' ) . '</p><!-- /wp:paragraph -->', // パターンの内容);
         )
     );
-
-
     register_nav_menus( array(       //カスタムメニューの有効化（管理画面の外観-メニューで編集できるようになる）
         'footer_nav' => esc_html__( 'footer navigation', 'raisetech-hamburger_wp' ),
         'category_nav' => esc_html__( 'category navigation', 'raisetech-hamburger_wp' ), //( 管理画面でのメニュー名 ,翻訳ファイル参照)
         // ↑ 識別キー                    // ↑ 翻訳可能な名前
     ) );
-    add_theme_support( 'editor-styles' );
-    add_editor_style();
-
-    add_theme_support( 'automatic-feed-links' );  //RSSフィードリンクを自動的に追加する
-   }
-   add_action( 'after_setup_theme', 'custom_theme_support' );
-
+}
+add_action( 'after_setup_theme', 'custom_theme_support' );
 
 
 function readScript() {
@@ -69,40 +63,45 @@ function readScript() {
     wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '', true); //jqueryの本体読み込み
     wp_enqueue_script( 'script', get_theme_file_uri('/js/main.js'), array('jquery'), '', true); //arrayは依存関係を指定、このjsﾌｧｲﾙは上行のjqueryを使って書かれたという意味
 }
-    add_action( 'wp_enqueue_scripts', 'readScript');
-    //add_action() は、WordPressのアクションフックに関数を登録するための関数。
-    //第１引数：スクリプトやスタイルシートを読み込むタイミングを指すアクションフック（ページの <head> セクションにスクリプトやスタイルシートを追加する直前に実行される
+add_action( 'wp_enqueue_scripts', 'readScript' );
+//add_action() は、WordPressのアクションフックに関数を登録するための関数。
+//第１引数：スクリプトやスタイルシートを読み込むタイミングを指すアクションフック（ページの <head> セクションにスクリプトやスタイルシートを追加する直前に実行される
 
 
-    // ブロックエディタに適用されるCSSを無効化
-    function remove_block_library_css() {
-        wp_dequeue_style('wp-block-library'); // すべてのブロックCSSを無効にする
+// ブロックエディタに適用されるCSSを無効化
+function remove_block_library_css() {
+    wp_dequeue_style( 'wp-block-library' ); // すべてのブロックCSSを無効にする
+}
+add_action( 'wp_enqueue_scripts', 'remove_block_library_css' );
+
+
+//コメントの返信機能を実装するために必要なスクリプトで、コメントの「返信」ボタンをクリックした際に動作します。
+function mytheme_enqueue_comment_reply_script() {
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
     }
-    add_action('wp_enqueue_scripts', 'remove_block_library_css');
-
-    //コメントの返信機能を実装するために必要なスクリプトで、コメントの「返信」ボタンをクリックした際に動作します。
-    function mytheme_enqueue_comment_reply_script() {
-        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-            wp_enqueue_script( 'comment-reply' );
-        }
-    }
-    add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_comment_reply_script' );
+}
+add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_comment_reply_script' );
 
 
-    //テキストドメインを読み込み
-    function theme_slug_setup() {
-        load_theme_textdomain( 'raisetech-hamburger_wp', get_template_directory() . '/languages' ); //第一引数はテキストドメイン,第二引数は翻訳ファイルの設置場所
-    }
-    add_action( 'after_setup_theme', 'theme_slug_setup' );
+//テキストドメインを読み込み
+function theme_slug_setup() {
+    load_theme_textdomain( 'raisetech-hamburger_wp', get_template_directory() . '/languages' ); //第一引数はテキストドメイン,第二引数は翻訳ファイルの設置場所
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
     
 
-    //ナビゲーションメニューに表示される項目タイトルを翻訳させるための関数
-    // function translate_menu_items($items, $args) {
-    //     foreach ($items as $item) {
-    //         $item->title = __($item->title, 'raisetech-hamburger_wp');
-    //     }
-    //     return $items;
-    // }
-    // add_filter('wp_nav_menu_objects', 'translate_menu_items', 10, 2);
+//ウィジェットエリア登録
+function my_theme_widgets_init() {
+    register_sidebar( array(
+        'name'          => 'Sidebar',
+        'id'            => 'sidebar-1',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'my_theme_widgets_init' );
     
 ?>

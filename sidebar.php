@@ -2,9 +2,8 @@
     <div class="p-sidebar">
         <button class="c-close-btn"><span>クローズボタン</span></button>
         <h2 class="sidebar__title c-heading--roboto">Menu</h2>
-        
-        <nav class="p-sidebar__nav">
 
+        <nav class="p-sidebar__nav">
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'category_nav', //'category_navigation'に登録したメニューを表示
@@ -12,11 +11,19 @@
                 'container'      => false, //自動生成されるdivタグ要素生成を防ぐ
             ));    //サブメニュー（各投稿項目）は'menu_class'の子要素になる、クラス名sub-menuが付与される
             ?>
-
         </nav>
     </div>
 </aside>
 <div class="p-sidebar__bg"></div>
+
+
+
+<!-- ウィジェットエリア表示、ウィジェットが追加されたときだけ表示する -->
+<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+    <aside id="secondary" class="widget-area">
+        <?php dynamic_sidebar( 'sidebar-1' ); ?>
+    </aside>
+<?php endif; ?>
 
 
 

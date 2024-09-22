@@ -3,7 +3,7 @@
             <main class="l-main">
                 <section class="p-archive__main-visual">
                     <div class="main-visual__img">
-                        <img class="main-visual__img--sp" src="<?php echo get_theme_file_uri('/images/page-title_arcive@2x.jpg'); ?>" alt="メインビジュアル スマホ">
+                        <img class="main-visual__img--sp" src="<?php echo esc_url( get_theme_file_uri('/images/page-title_arcive@2x.jpg') ); ?>" alt="メインビジュアル スマホ">
                     </div>
                     <div class="main-visual__title">
                         <h1 class="c-heading--roboto">Search:</h1>
@@ -15,6 +15,7 @@
                     <h2>小見出しが入ります</h2>
                     <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                 </section>
+
                 <section class="p-archive__content">
                     <ul class="card-list">
                         <?php
@@ -24,7 +25,7 @@
                         <?php get_template_part('template-parts/post-card'); ?>
                             <?php endwhile; ?>
                         <?php else : ?>
-                            <p>記事がありません</p>
+                            <p class="u-no-posts"><?php echo esc_html__( 'There are no articles', 'raisetech-hamburger_wp' ); ?></p>
                         <?php endif ; ?>
                     </ul>
                 </section>
@@ -32,8 +33,8 @@
                 <section class="p-pagination">
                     <?php get_template_part('template-parts/pagination'); ?>
                 </section>
-
             </main>
+            
         </div>
         <?php get_sidebar(); ?>
     </div>

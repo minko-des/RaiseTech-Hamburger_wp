@@ -31,14 +31,14 @@
             align-items: flex-end;  //子要素description-wrapを下端に配置
             position: relative;   
 
-            .p-service__title {
+            .service__title {
                 position: absolute;
                 top: 2%;
                 left: 4.5%;
                 display: flex;
                 flex-direction: column;
                 
-                .service__title__label {
+                .service__title-label {
                     color: #ffff;
                     font-size: 4.1rem;
             
@@ -63,7 +63,7 @@
                 }
             }
             
-            .p-description-wrap {
+            .service__description-wrap {
                 width: 100%;
                 height: auto;
                 padding: 16px;
@@ -71,7 +71,7 @@
                 display: flex;
                 flex-direction: column;
             
-                .p-description {
+                .description {
                     width: 100%;
                     height: auto;
                     padding: 16px;
