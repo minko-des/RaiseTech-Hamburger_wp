@@ -92,7 +92,7 @@
 
 
     //ギャラリー
-    .wp-block-gallery.aligncenter {
+    .wp-block-gallery {
         height: auto;
         margin: 30px auto 0 auto;
 
@@ -267,6 +267,7 @@
 .sticky,
 .gallery-caption,
 .bypostauthor,
+.aligncenter,
 .alignright,
 .alignleft {width: auto;}
 

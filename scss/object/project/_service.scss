@@ -19,7 +19,8 @@
     .p-service {
         width: 100%;
         height: 100%;
-        background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-takeout.jpg.webp);
+        background-image: url(../images/service-content-takeout.jpg.webp);
+        // background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-takeout.jpg.webp);
         background-size: cover;
         background-position: center;  //左右上下共に中央
         background-repeat: no-repeat;
@@ -103,5 +104,6 @@
 }
 
 .type-service:last-child .p-service {
-    background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-eatin.jpg);
+    background-image: url(../images/service-content-eatin.jpg);
+    // background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-eatin.jpg);
 }

@@ -444,7 +444,7 @@ ul, ol {
   background-color: white;
   border: solid 1px #707070;
   border-radius: 10px;
-  background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/rupe.svg);
+  background-image: url(../images/rupe.svg);
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: 5px center;
@@ -825,7 +825,7 @@ ul, ol {
 .type-service .p-service {
   width: 100%;
   height: 100%;
-  background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-takeout.jpg.webp);
+  background-image: url(../images/service-content-takeout.jpg.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -906,7 +906,7 @@ ul, ol {
 }
 
 .type-service:last-child .p-service {
-  background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/service-content-eatin.jpg);
+  background-image: url(../images/service-content-eatin.jpg);
 }
 
 .p-access {
@@ -928,7 +928,7 @@ ul, ol {
     min-height: 650px;
   }
 }
-.p-access .access__img {
+.p-access iframe {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1016,7 +1016,7 @@ ul, ol {
 .p-footer {
   width: 100%;
   height: 100%;
-  background-image: url(/wp-content/themes/RaiseTech-Hamburger_wp/images/footer-bg.jpg);
+  background-image: url(../images/footer-bg.jpg);
   background-position: center;
   background-repeat: repeat;
   position: relative;
@@ -1246,50 +1246,50 @@ ul, ol {
 .p-single__content .wp-block-media-text .wp-block-media-text__content p {
   margin-top: 0;
 }
-.p-single__content .wp-block-gallery.aligncenter {
+.p-single__content .wp-block-gallery {
   height: auto;
   margin: 30px auto 0 auto;
 }
 @media (min-width: 750px) {
-  .p-single__content .wp-block-gallery.aligncenter {
+  .p-single__content .wp-block-gallery {
     margin-top: 60px;
     flex-wrap: wrap;
   }
 }
-.p-single__content .wp-block-gallery.aligncenter .wp-block-image {
+.p-single__content .wp-block-gallery .wp-block-image {
   width: 100%;
   height: 205px;
   margin: 0 0 20px 0;
 }
 @media (min-width: 750px) {
-  .p-single__content .wp-block-gallery.aligncenter .wp-block-image {
+  .p-single__content .wp-block-gallery .wp-block-image {
     width: 48%;
   }
 }
 @media (min-width: 1250px) {
-  .p-single__content .wp-block-gallery.aligncenter .wp-block-image {
+  .p-single__content .wp-block-gallery .wp-block-image {
     width: 31%;
     height: 257px;
   }
 }
-.p-single__content .wp-block-gallery.aligncenter .wp-block-image img {
+.p-single__content .wp-block-gallery .wp-block-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.p-single__content .wp-block-gallery.aligncenter .wp-block-image:first-child {
+.p-single__content .wp-block-gallery .wp-block-image:first-child {
   width: 70%;
   height: auto;
   margin: 0 auto 30px auto;
 }
 @media (min-width: 750px) {
-  .p-single__content .wp-block-gallery.aligncenter .wp-block-image:first-child {
+  .p-single__content .wp-block-gallery .wp-block-image:first-child {
     margin-bottom: 240px;
   }
 }
 @media (min-width: 1250px) {
-  .p-single__content .wp-block-gallery.aligncenter .wp-block-image:first-child {
+  .p-single__content .wp-block-gallery .wp-block-image:first-child {
     margin-bottom: 60px;
   }
 }
@@ -1399,6 +1399,7 @@ ul, ol {
 .sticky,
 .gallery-caption,
 .bypostauthor,
+.aligncenter,
 .alignright,
 .alignleft {
   width: auto;
